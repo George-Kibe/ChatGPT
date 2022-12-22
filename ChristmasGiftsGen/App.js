@@ -14,7 +14,8 @@ import {
 } from "react-native";
 import loadingGif from "./assets/loading.gif";
 
-const API_URL = "https://gifts-test.vercel.app/api";
+const API_URL = "https://chat-gpt-blue.vercel.app//api";
+//const API_URL = "http://localhost:3000/api"
 
 export default function App() {
   const [gender, setGender] = useState("man");
@@ -33,7 +34,7 @@ export default function App() {
     setLoading(true);
     setResult("");
     try {
-      const response = await fetch(`${API_URL}/generate-gifts`, {
+      const response = await fetch(`${API_URL}/generate`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
